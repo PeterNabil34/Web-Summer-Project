@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="lp_form">
+      <a href="index.html"><pre class="back">⇦</pre></a>
+      <a href="admin.html"><pre class="admin">Admin</pre></a>
+
+      <h1 class="lp_header">Login</h1>
+
+      <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return validateForm()">
+        <pre>First Name</pre><input type="text" name="fname" required><br>
+        <pre>Last Name </pre><input type="text" name="lname" required><br>
+        <pre>Email     </pre><input type="email" name="email" required><br>
+        <pre>Password  </pre><input type="password" name="password" required><br>
+        <pre>Gender        </pre><input type="radio" name="gender">Male
+                             <input type="radio" name="gender">Female<br>
+
+        <label for="country"><pre>Country          </pre></label>
+        <select name="country" class="country" required>
+          <option value="egypt">Egypt</option>
+          <option value="usa">United States</option>
+          <option value="russia">Russia</option>
+          <option value="canada">Canada</option>
+          <option value="china">China</option>
+          <option value="india">India</option>
+          <option value="australia">Australia</option>
+        </select> <br><br>
+
+        <input type="submit" name="submit" value="Join Now" class="submit">
+      </form>
+    </div>
+  </body>
+</html>

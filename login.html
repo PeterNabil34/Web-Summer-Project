@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Login Page</title>
     <link rel="stylesheet" href="style.css">
+    <script charset="utf-8" src="./functions.js"></script>
   </head>
   <body>
     <div class="lp_form">
@@ -13,10 +14,14 @@
       <h1 class="lp_header">Login</h1>
 
       <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return validateForm()">
-        <pre>First Name</pre><input type="text" name="fname" required><br>
-        <pre>Last Name </pre><input type="text" name="lname" required><br>
-        <pre>Email     </pre><input type="email" name="email" required><br>
-        <pre>Password  </pre><input type="password" name="password" required><br>
+        <pre>First Name</pre><input type="text" id="fname" required><br>
+        <span id="fname_message"></span>
+        <pre>Last Name </pre><input type="text" id="lname" required><br>
+        <span id="lname_message"></span>
+        <pre>Email     </pre><input type="email" id="email" required><br>
+        <span id="email_message"></span>
+        <pre>Password  </pre><input type="password" id="password" required><br>
+        <span id="password_message"></span>
         <pre>Gender        </pre><input type="radio" name="gender">Male
                              <input type="radio" name="gender">Female<br>
 

@@ -13,7 +13,7 @@ function validateForm() {
     }
     else if (numbers.test(lname))
     {
-        document.getElementById('lname_message').innerHTML = "  *Your First Name shouldn't contain any numbers.<br>";
+        document.getElementById('lname_message').innerHTML = "  *Your Last Name shouldn't contain any numbers.<br>";
         document.getElementById('lname').focus();
         return false;
     }    

@@ -12,6 +12,9 @@ a{
 a:visited{
   color: #404040;
 }
+span{
+  color: rgb(236, 53, 53)
+}
 /* ---------------------------- Home Page Design ---------------------------*/
 .homepage{
   background-image: url("images/homepage.jpg");

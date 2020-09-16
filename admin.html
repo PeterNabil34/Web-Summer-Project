@@ -4,16 +4,48 @@
     <meta charset="utf-8">
     <title>Notes</title>
     <link rel="stylesheet" href="style.css">
+    <script charset="utf-8" src="./functions.js"></script>
   </head>
   <body>
     <div class="np_design">
       <a href="login.html"><pre class="back">⇦</pre></a>
+
       <h1 class="np_header">Welcome Admin</h1>
+
       <button type="button" class="logout">
         <a href="index.html">Logout</a>
       </button>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      <form class="ap_form" action="add.html" method="post">
+        <pre>Font Color: </pre><br>
+        <input type="radio" name="black" value="black" checked="checked"><pre style="color:black">Black</pre>
+        <input type="radio" name="red" value="red"><pre style="color:red">Red</pre>
+        <input type="radio" name="green" value="green"><pre style="color:green">Green</pre>
+        <input type="radio" name="blue" value="blue"><pre style="color:blue">Blue</pre>
+        <br><br>
+
+        <pre>Font Size:  </pre><br>
+        <input type="radio" name="15" value="15"><pre style="font-size:15px">15"</pre>
+        <input type="radio" name="20" value="20" checked="checked"><pre style="font-size:20px">20"</pre>
+        <input type="radio" name="25" value="25"><pre style="font-size:25px">25"</pre>
+        <input type="radio" name="30" value="30"><pre style="font-size:30px">30" </pre>
+        <br><br>
+
+        <pre>Background Color: </pre><br>
+        <input type="radio" name="white" value="white" checked="checked"><pre style="color:white">White</pre>
+        <input type="radio" name="yellow" value="yellow"><pre style="color:yellow">Yellow</pre>
+        <input type="radio" name="pink" value="pink"><pre style="color:pink">Pink</pre>
+        <input type="radio" name="grey" value="grey"><pre style="color:grey">Grey</pre>
+        <br><br>
+
+        <pre>Font Type: </pre><br>
+        <input type="radio" name="sans-sherif" value="sans-sherif" checked="checked"><pre style="font-family:sans-serif">Sans-sherif</pre>
+        <input type="radio" name="fantasy" value="fantasy"><pre style="font-family:fantasy">Fantasy</pre>
+        <input type="radio" name="cursive" value="cursive"><pre style="font-family:cursive">Cursive</pre>
+        <input type="radio" name="monospace" value="monospace"><pre style="font-family:monospace">Monospace</pre><br>
+
+        <input type="submit" name="submit" value="Save" class="add_button">
+      </form>
     </div>
   </body>
 </html>

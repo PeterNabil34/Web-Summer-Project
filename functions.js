@@ -16,7 +16,7 @@ function validateForm() {
         document.getElementById('lname_message').innerHTML = "  *Your Last Name shouldn't contain any numbers.<br>";
         document.getElementById('lname').focus();
         return false;
-    }    
+    }
     else if(email.indexOf('.') == -1)
     {
         document.getElementById('email_message').innerHTML = "  *Please enter a valid email.<br>";

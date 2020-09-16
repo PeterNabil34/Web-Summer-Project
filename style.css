@@ -120,6 +120,7 @@ pre{
   margin-top: 0;
   color: #404040;
   padding-top: 30px;
+  margin-bottom: 100px;
 }
 .add{
   font-size: 35px;
@@ -143,8 +144,36 @@ pre{
   border: 0;
   font-weight: bold;
 }
-
-
+/* ---------------------------- Add Page Design ---------------------------*/
+.np_form{
+  background-image: url("images/note.jpg");
+  text-align: center;
+  padding-top: 80px;
+  font-size: 25px;
+}
+.textarea{
+  border-radius: 10px;
+  font-size: 20px;
+  outline: none;
+  padding: 8px;
+  font-family: sans-serif;
+}
+.add_button{
+  font-size: 30px;
+  background-color: #990000;
+  border-color: #990000;
+  color: #d9d9d9;
+  padding: 7px;
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+/* ---------------------------- Admin Page Design ---------------------------*/
+.ap_form{
+  text-align: center;
+  font-size: 20px;
+  font-family: monospace;
+}
 
 
 

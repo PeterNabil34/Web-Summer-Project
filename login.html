@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Login Page</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css">
     <script charset="utf-8" src="./functions.js"></script>
   </head>
@@ -10,34 +10,20 @@
     <div class="lp_form">
       <a href="index.html"><pre class="back">⇦</pre></a>
       <a href="admin.html"><pre class="admin">Admin</pre></a>
+      <h1 class="lp_header">Login</h1><br>
 
-      <h1 class="lp_header">Login</h1>
+      <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return false">
+        <pre>Username  </pre><input type="username" id="username" required><br>
+        <span id="username_message"></span><br>
 
-      <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return validateForm()">
-        <pre>First Name</pre><input type="text" id="fname" required><br>
-        <span id="fname_message"></span>
-        <pre>Last Name </pre><input type="text" id="lname" required><br>
-        <span id="lname_message"></span>
-        <pre>Email     </pre><input type="email" id="email" required><br>
-        <span id="email_message"></span>
-        <pre>Password  </pre><input type="password" id="password" required><br>
-        <span id="password_message"></span>
-        <pre>Gender        </pre><input type="radio" name="gender">Male
-                             <input type="radio" name="gender">Female<br>
+        <pre>Password  </pre><input type="password" id="lpassword" required>
+        <span id="lpassword_message"></span>
 
-        <label for="country"><pre>Country          </pre></label>
-        <select name="country" class="country" required>
-          <option value="egypt">Egypt</option>
-          <option value="usa">United States</option>
-          <option value="russia">Russia</option>
-          <option value="canada">Canada</option>
-          <option value="china">China</option>
-          <option value="india">India</option>
-          <option value="australia">Australia</option>
-        </select> <br><br>
-
-        <input type="submit" name="submit" value="Join Now" class="submit">
+        <br><br><br><br>
+        <input type="submit" name="submit" value="Login" class="submit">
       </form>
+
+      <br><br><br><br>
     </div>
   </body>
 </html>

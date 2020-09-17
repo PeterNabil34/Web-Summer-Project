@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <script charset="utf-8" src="./functions.js"></script>
   </head>
   <body>
     <div class="homepage">
@@ -11,10 +12,43 @@
       <p class="hp_text">Web-Based Notebook that enables Interactive data analysis <br>
          Helps in Creating Interactive and Collaborative Documents
        </p>
-       <button class="hp_register" type="button" name="login">
-         <a href="login.html" class="hp_link">Register Here</a>
+       <button class="hp_register" type="button" name="register">
+         <a href="register.html" class="hp_link">Register Here</a>
        </button>
-       <br><br><br><br><br><br><br><br>
+       <button class="hp_login" type="button" name="login">
+         <a href="login.html" class="hp_link">Login Here</a>
+       </button><br><br>
+
+                            <!-- Image Scroll Bar -->
+
+      <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <img src="images/free.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/easy.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/quality.png" style="width:100%">
+        </div>
+
+      </div>
+      <br>
+
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <script type="text/javascript">
+          var slideIndex = 0;
+          showSlides();
+      </script>
+      <br><br>
     </div>
   </body>
 </html>

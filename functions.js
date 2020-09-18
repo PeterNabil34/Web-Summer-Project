@@ -1,4 +1,4 @@
-function validateForm() {
+function registerForm() {
     var fname = document.getElementById('fname').value;
     var lname = document.getElementById('lname').value;
     var email = document.getElementById('email').value;
@@ -9,56 +9,64 @@ function validateForm() {
     var passform = /^[a-zA-Z0-9]+$/;
 
     if(alpha.test(fname) == false)
-    {
-        document.getElementById('fname_message').innerHTML = "  *Your First Name Should Contain Letters ONLY.<br>";
-        document.getElementById('fname').focus();
-        return false;
-    }
+        {
+            document.getElementById('fname_message').innerHTML = "  *Your First Name Should Contain Letters ONLY.<br>";
+            document.getElementById('fname').focus();
+            return false;
+        }
     else
-    {
-        document.getElementById('fname_message').innerHTML = "";
-    }
+        {
+            document.getElementById('fname_message').innerHTML = "";
+        }
 
     if(alpha.test(lname) == false)
-    {
-        document.getElementById('lname_message').innerHTML = "  *Your Last Name Should Contain Letters ONLY.<br>";
-        document.getElementById('lname').focus();
-        return false;
-    }
+        {
+            document.getElementById('lname_message').innerHTML = "  *Your Last Name Should Contain Letters ONLY.<br>";
+            document.getElementById('lname').focus();
+            return false;
+        }
     else
-    {
-        document.getElementById('lname_message').innerHTML = "";
-    }
+        {
+            document.getElementById('lname_message').innerHTML = "";
+        }
 
     if(emailform.test(email) == false)
-    {
-        document.getElementById('email_message').innerHTML = "  *Please enter a valid email.<br> Ex: test.numbers@test.com<br>";
-        document.getElementById('email').focus();
-        return false;
-    }
+        {
+            document.getElementById('email_message').innerHTML = "  *Please enter a valid email.<br> Ex: test.numbers@test.com<br>";
+            document.getElementById('email').focus();
+            return false;
+        }
     else
-    {
-        document.getElementById('email_message').innerHTML = "";
-    }
-
-    if(pass.length < 5)
-    {
-        document.getElementById('password_message').innerHTML = "  *Your password is less than 5 characters.<br>";
-        document.getElementById('password').focus();
-        return false;
-    }
-    else if(passform.test(pass) == false)
-    {
-        document.getElementById('password_message').innerHTML = "  *Your password Should ONLY Contain Letters or Numbers.<br>";
-        document.getElementById('password').focus();
-        return false;
-    }
+        {
+            document.getElementById('email_message').innerHTML = "";
+        }
+    
+    if(pass.length < 8)
+        {
+            document.getElementById('password_message').innerHTML = "  *Your password is less than 8 characters.<br>";
+            document.getElementById('password').focus();
+            return false;
+        }
+    else
+        {
+            document.getElementById('password_message').innerHTML = "";
+        }
+    if(passform.test(pass) == false)
+        {
+            document.getElementById('password_message').innerHTML = "  *Your password Should ONLY Contain Letters or Numbers.<br>";
+            document.getElementById('password').focus();
+            return false;
+        }
+    else 
+        {
+            document.getElementById('password_message').innerHTML = "";
+        }
     return true;
 }
 
 function loginvalidation(){
     var username = document.getElementById('username').value;
-    var lpass = document.getElementById('lpassword').value;
+    var lpass = document.getElementById('password').value;
 
     var usernameform = /^[a-zA-Z_]+$/;
     var lpassform = /^[a-zA-Z0-9]+$/;
@@ -66,20 +74,23 @@ function loginvalidation(){
     if(usernameform.test(username) == false)
     {
         document.getElementById('username_message').innerHTML = "  *USername Should ONLY Contain Letters or '_'<br>";
-        document.getElementById('email').focus();
+        document.getElementById('username').focus();
         return false;
     }
-    else if(lpass.length < 8)
+    else
     {
-        document.getElementById('lpassword_message').innerHTML = "  *Your password is less than 8 characters.<br>";
         document.getElementById('username_message').innerHTML = "";
-        document.getElementById('lpassword').focus();
+    }
+    if(lpass.length < 8)
+    {
+        document.getElementById('password_message').innerHTML = "  *Your password is less than 8 characters.<br>";
+        document.getElementById('password').focus();
         return false;
     }
     else if(lpassform.test(lpass) == false)
     {
-        document.getElementById('lpassword_message').innerHTML = "  *Your password Should ONLY Contain Letters or Numbers.<br>";
-        document.getElementById('lpassword').focus();
+        document.getElementById('password_message').innerHTML = "  *Your password Should ONLY Contain Letters or Numbers.<br>";
+        document.getElementById('password').focus();
         return false;
     }
     return true

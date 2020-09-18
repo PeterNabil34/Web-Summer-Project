@@ -12,12 +12,12 @@
       <a href="admin.html"><pre class="admin">Admin</pre></a>
       <h1 class="lp_header">Login</h1><br>
 
-      <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return false">
+      <form id="login_form" name="login_form" action="notes.html" method="post" onsubmit="return loginvalidation()">
         <pre>Username  </pre><input type="username" id="username" required><br>
         <span id="username_message"></span><br>
 
-        <pre>Password  </pre><input type="password" id="lpassword" required>
-        <span id="lpassword_message"></span>
+        <pre>Password  </pre><input type="password" id="password" required><br>
+        <span id="password_message"></span>
 
         <br><br><br><br>
         <input type="submit" name="submit" value="Login" class="submit">

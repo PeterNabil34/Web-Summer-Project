@@ -93,8 +93,14 @@ function loginvalidation(){
         document.getElementById('password').focus();
         return false;
     }
+    if(username == 'admin' && lpass == 'admin123')
+    {
+        document.getElementById('login_form').action = "admin.html";
+    }
+
     return true
 }
+
 
 function showSlides() {
     var i;

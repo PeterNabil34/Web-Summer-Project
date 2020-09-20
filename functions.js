@@ -123,11 +123,26 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-function showInput()
-{
-    var x=document.getElementById('sampleTable').insertRow(0);
-    var y = x.insertCell(0);
-    var z = x.insertCell(1);
-    y.innerHTML=document.getElementById("title").value;;
-    z.innerHTML=document.getElementById("note").value;;
+function get_fontColor(value = "black"){
+    localStorage.setItem('fontColor',String(value));
 }
+function get_fontBg(value = "grey"){
+    localStorage.setItem('fontBg',String(value));
+}
+function get_fontSize(value = "20"){
+    localStorage.setItem('fontSize',String(value)+'px');
+}
+function get_fontType(value = "sans-serif"){
+    localStorage.setItem('fontType',String(value));
+}
+function showInput() {
+        var noteContent = document.getElementById('note_dis');
+        
+        noteContent.style.color           = localStorage.getItem('fontColor')
+        noteContent.style.backgroundColor = localStorage.getItem('fontBg')
+        noteContent.style.fontSize        = localStorage.getItem('fontSize')
+        noteContent.style.fontFamily      = localStorage.getItem('fontType')
+
+        document.getElementById('note_dis').innerHTML  = document.getElementById("note").value;
+        document.getElementById('title_dis').innerHTML = document.getElementById("title").value;
+    }

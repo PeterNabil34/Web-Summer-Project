@@ -123,7 +123,11 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-function showInput() {
-        document.getElementById('title_dis').innerHTML = document.getElementById("title").value;
-        document.getElementById('note_dis').innerHTML = document.getElementById("note").value;
-    }
+function showInput()
+{
+    var x=document.getElementById('sampleTable').insertRow(0);
+    var y = x.insertCell(0);
+    var z = x.insertCell(1);
+    y.innerHTML=document.getElementById("title").value;;
+    z.innerHTML=document.getElementById("note").value;;
+}

@@ -186,7 +186,12 @@ pre{
   font-family: monospace;
 }
 .new_note{
-  font-size: 30px;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px 25%;
+}
+td{
+  padding: 5px;
 }
 /* ---------------------------- Image Slide Design ---------------------------*/
 

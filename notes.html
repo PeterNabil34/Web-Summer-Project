@@ -5,25 +5,37 @@
     <title>Notes</title>
     <link rel="stylesheet" href="style.css">
     <script charset="utf-8" src="./functions.js"></script>
+
+    <style>
+      #title_dis{
+        color:black;
+        font-weight: bold;
+      }
+      #note_dis{
+        color:black;
+      }
+    </style>
+
   </head>
   <body>
     <div class="np_design">
       <h1 class="np_header">Welcome</h1>
 
-      <button type="button" class="logout">
-        <a href="login.html">Logout</a>
-      </button>
-
-      <div class="np_form">
-        <form class="notes_form" action="notes.html" method="post">
-          <pre>Enter Your Note Title</pre><br>
-          <input type="text" name="title"><br>
-          <pre>Note</pre><br>
-          <textarea class="textarea" name="note" rows="15" cols="80"></textarea><br>
-          <input type="submit" name="submit" value="Add" class="add_button">
-        </form>
+      <div class="new_note">
+        <span id='title_dis'></span><br>
+        <span id='note_dis'></span>
       </div>
 
+      <form class="np_form">
+        <pre>Enter Your Note Title</pre><br>
+        <input type="text" name="message" id="title"><br>
+
+        <pre>Note</pre><br>
+        <textarea class="textarea" name="note" rows="15" cols="80" id="note"></textarea>
+      </form>
+
+      <input type="submit" class="add_button" onclick="showInput();"><br/>
     </div>
+
   </body>
 </html>

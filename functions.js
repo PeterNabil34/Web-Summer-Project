@@ -40,7 +40,7 @@ function registerForm() {
         {
             document.getElementById('email_message').innerHTML = "";
         }
-    
+
     if(pass.length < 8)
         {
             document.getElementById('password_message').innerHTML = "  *Your password is less than 8 characters.<br>";
@@ -57,7 +57,7 @@ function registerForm() {
             document.getElementById('password').focus();
             return false;
         }
-    else 
+    else
         {
             document.getElementById('password_message').innerHTML = "";
         }
@@ -101,7 +101,6 @@ function loginvalidation(){
     return true
 }
 
-
 function showSlides() {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -123,3 +122,8 @@ function showSlides() {
     dots[slideIndex-1].className += " active";
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+function showInput() {
+        document.getElementById('title_dis').innerHTML = document.getElementById("title").value;
+        document.getElementById('note_dis').innerHTML = document.getElementById("note").value;
+    }

@@ -7,31 +7,31 @@
     <script charset="utf-8" src="./functions.js"></script>
 
     <style>
-      #sampleTable{
-        text-align: center;
-        border-collapse: collapse;
+      #title_dis{
+        color:black;
+        font-weight: bold;
       }
-      #note{
-        font-size: 24px;
-        font-weight: lighter;
-      }
-      #title{
-        font-size: 24px;
-        font-weight: lighter;
+      #note_dis{
+        color:black;
+
       }
     </style>
 
   </head>
-  
+
   <body>
     <div class="np_design">
       <h1 class="np_header">Welcome</h1>
 
+      <nav>
+        <a href="index.html" class="nav">Home</a> |
+        <a href="login.html" class="nav">Admin</a> |
+        <a href="register.html" class="nav">Logout</a>
+      </nav><br><br><br><br>
+
       <div class="new_note">
-        <table id="sampleTable" border="1">
-          <tr><td style="padding: 5px 80px; font-weight:bold; font-size: 30px;">Title</td>
-          <td style="padding: 5px 220px; font-weight:bold; font-size: 30px;">Note</td></tr>
-        </table><br>
+        <span id='title_dis'></span><br>
+        <span id='note_dis'></span>
       </div>
 
       <form class="np_form">
@@ -39,7 +39,7 @@
         <input type="text" name="message" id="title"><br>
 
         <pre>Note</pre><br>
-        <textarea class="textarea" name="note" rows="10" cols="60" id="note"></textarea>
+        <textarea class="textarea" name="note" rows="15" cols="80" id="note"></textarea>
       </form>
 
       <input type="submit" class="add_button" onclick="showInput();"><br/>

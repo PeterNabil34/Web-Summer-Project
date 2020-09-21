@@ -123,25 +123,36 @@ function showSlides() {
     setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 
-function get_fontColor(value = "black"){
+function get_fontColor(value){
     localStorage.setItem('fontColor',String(value));
 }
-function get_fontBg(value = "grey"){
+function get_fontBg(value){
     localStorage.setItem('fontBg',String(value));
 }
-function get_fontSize(value = "20"){
+function get_fontSize(value){
     localStorage.setItem('fontSize',String(value)+'px');
 }
-function get_fontType(value = "sans-serif"){
+function get_fontType(value){
     localStorage.setItem('fontType',String(value));
 }
 function showInput() {
         var noteContent = document.getElementById('note_dis');
-        
+        var noteTitle   = document.getElementById('title_dis');
+
         noteContent.style.color           = localStorage.getItem('fontColor')
         noteContent.style.backgroundColor = localStorage.getItem('fontBg')
         noteContent.style.fontSize        = localStorage.getItem('fontSize')
         noteContent.style.fontFamily      = localStorage.getItem('fontType')
+        
+        noteContent.style.border          = "2px" 
+        noteContent.style.borderColor     = "black"
+        noteContent.style.borderStyle     = "solid" 
+        noteContent.style.padding         = "3px" 
+ 
+        noteTitle.style.border          = "2px" 
+        noteTitle.style.borderColor     = "black"
+        noteTitle.style.borderStyle     = "solid" 
+        noteTitle.style.padding         = "5px" 
 
         document.getElementById('note_dis').innerHTML  = document.getElementById("note").value;
         document.getElementById('title_dis').innerHTML = document.getElementById("title").value;

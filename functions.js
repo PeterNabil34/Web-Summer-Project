@@ -138,6 +138,7 @@ function get_fontType(value){
 function showInput() {
         var noteContent = document.getElementById('note_dis');
         var noteTitle   = document.getElementById('title_dis');
+        var paragraph   = document.getElementById('note').value;
 
         noteContent.style.color           = localStorage.getItem('fontColor')
         noteContent.style.backgroundColor = localStorage.getItem('fontBg')
@@ -154,6 +155,21 @@ function showInput() {
         noteTitle.style.borderStyle     = "solid" 
         noteTitle.style.padding         = "5px" 
 
-        document.getElementById('note_dis').innerHTML  = document.getElementById("note").value;
         document.getElementById('title_dis').innerHTML = document.getElementById("title").value;
+        
+        var word = 0;
+        for ( var i = 0; i < paragraph.length ; i++)
+        {
+            noteContent.innerHTML += paragraph[i];
+            if (paragraph[i] == " ")
+            {
+                word++;
+            }
+            if (word == 9)
+            {
+                word = 0;
+                noteContent.innerHTML += "<br>"
+
+            }
+        }
     }
